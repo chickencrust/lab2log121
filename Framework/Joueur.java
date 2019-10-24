@@ -1,7 +1,14 @@
 package framework;
 
+import java.util.Iterator;
+
+
+
 public class Joueur implements Comparable<Joueur>{
     private int nbPoints;
+    private Iterator<De> iterateur;
+
+
 
     public int getPoints(){
         return nbPoints;
@@ -13,7 +20,14 @@ public class Joueur implements Comparable<Joueur>{
         this.nbPoints = nbPoints;
     }
 
-    public Joueur(){
+    public void roulerDes(){
+        while(iterateur.hasNext()){
+            iterateur.next().rouler();
+        }
+    }
+
+    public Joueur(Iterator<De> iterateurDe){
+        iterateur = iterateurDe;
         nbPoints = 0;
     }
 

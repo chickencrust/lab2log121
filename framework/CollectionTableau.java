@@ -113,8 +113,10 @@ public class CollectionTableau<E> implements Collection<E> {
 
     }
 
-    private class Iterateur<D> implements Iterator<E> {
+    public class Iterateur implements Iterator<E> {
         private int position = 0;
+
+
  
         public boolean hasNext() {
             if (position < compteElement)
