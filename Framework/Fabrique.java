@@ -1,11 +1,12 @@
 package framework;
 
 public abstract class Fabrique{
-   
    public void initialiserJeu(){
-       creerDes();
-       creerJoueurs();
-   };
+        initialiserRegles();
+        creerDes();
+        creerJoueurs(); 
+   }
+   public abstract void initialiserRegles();
    public abstract void creerDes();
    public abstract void creerJoueurs();
 }
